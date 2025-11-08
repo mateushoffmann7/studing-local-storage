@@ -1,12 +1,12 @@
 import { Header } from './components/Header';
-import { InputProvider } from './contexts/ContextAddPost';
+import { PostProvider } from './contexts/ContextAddPost';
 
 export default function Home() {
   return (
     <div className="container mx-auto flex flex-col max-w-96 items-center justify-center">
-      <InputProvider>
+      <PostProvider>
         <Header />
-      </InputProvider>
+      </PostProvider>
     </div>
   );
 }

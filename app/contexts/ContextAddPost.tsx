@@ -8,7 +8,7 @@ const STORAGE_KEY = 'postContextContent';
 
 export const ContextAddPost = createContext<PropsAddPost | null>(null);
 
-export function InputProvider({ children }: ProviderProps) {
+export function PostProvider({ children }: ProviderProps) {
   const [post, setPost] = useState<PostProps[]>(() => {
     //se for server - retorna array vazio
     if (isServer) return [];
