@@ -7,8 +7,11 @@ export function Posts() {
   const context = useContext(ContextAddPost);
 
   function handleDeleteItem(index: number) {
-    const newPost = context?.post.filter((item) => item.id !== index) || [];
-    context?.setPost(newPost);
+    context?.setPost(
+      context.post.filter((item) => {
+        return item.id !== index;
+      }),
+    );
   }
 
   return (
